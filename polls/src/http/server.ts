@@ -10,9 +10,8 @@ app.register(createPoll)
 app.register(getPoll)
 app.register(voteOnPoll)
 app.register(cookie, {
-  secret: 'poll-nlw', // for cookies signature
-  hook: 'onRequest', // set to false to disable  cookie autoparsing or set autoparsing
-  parseOptions: {}, // options for parsing cookies
+  secret: 'poll-nlw',
+  hook: 'onRequest',
 })
 
 app.listen({ port: 3333 }).then(() => {

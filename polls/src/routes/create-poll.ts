@@ -13,7 +13,7 @@ export async function createPoll(app: FastifyInstance) {
     const poll = await prisma.poll.create({
       data: {
         title,
-        PollOption: {
+        options: {
           createMany: {
             data: options.map((option) => {
               return { title: option }
